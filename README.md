@@ -24,3 +24,13 @@ send.html 用来输入服务端要推送的消息内容
 连接刚启动的服务，建立SSE连接。
 
 然后再打开*send.html*页面，输入内容，点击*send*按钮，再查看*index.html*页面的变化。
+
+
+## 参考来源
+[Server-Sent Events](https://www.w3.org/TR/2011/WD-eventsource-20110208/) 
+  
+ w3的权威说明： https://www.w3.org/TR/2011/WD-eventsource-20110208/
+
+[HTML5 服务器推送事件（Server-sent Events）实战开发](http://www.ibm.com/developerworks/cn/web/1307_chengfu_serversentevent/)  
+  
+ 也写的很详细，还讲了如何在IE中使用（EventSource对象IE中不支持）  http://www.ibm.com/developerworks/cn/web/1307_chengfu_serversentevent/
