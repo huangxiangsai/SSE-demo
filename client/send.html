@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>send</title>
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<style>
+	
+		.content{
+			width : 540px;
+			margin : 0 auto;
+			padding-top : 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<label >send msg to SSE(Sever Send Event): </label>
+		<input type="text" name="msg" id="msg" placeholder="message">
+		<button onclick="send();">send</button>
+		<br>
+		<br>
+		<p >
+		请先打开index.html , 输入msg 点击send按钮后,查看index.html的内容
+		</p>
+	</div>
+	
+
+
+	<script src="./jquery.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	function send (event) {
+		var value = document.getElementById('msg').value;
+		$.ajax({
+			url : 'http://127.0.0.1:8081/sendData?data='+value,
+			type : 'GET',
+			dataType : 'json',
+			success : function (res) {
+				console.log(res.data);
+				
+			}
+		});
+	}
+	</script>
+</body>
+</html>
